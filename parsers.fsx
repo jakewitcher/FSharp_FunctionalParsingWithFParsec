@@ -30,10 +30,10 @@ module PhoneNumber =
           Prefix: int
           LineNumber: int }
 
-    let createPhoneNumber ac pf ln =
-        { AreaCode = ac
-          Prefix = pf
-          LineNumber = ln }
+    let createPhoneNumber a p l =
+        { AreaCode = a
+          Prefix = p
+          LineNumber = l }
 
     let pareacode = between popenparens pcloseparens pint32 <|> pint32 .>> pdash
 
